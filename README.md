@@ -29,8 +29,8 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :user
+- belongs_to :group
 
 ## messages table
 |Column|Type|Options|
