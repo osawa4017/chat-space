@@ -31,7 +31,6 @@
 ### Association
 - belongs_to :groups
 - belongs_to :users
-- has_many :messages
 
 ## messages table
 |Column|Type|Options|
