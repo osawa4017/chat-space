@@ -15,20 +15,21 @@
     &__box {
       height: 20px;
       width: 260px;
-      background-color: #d8d8d8;
       margin: 40px 20px;
       display: flex;
       justify-content: space-between;
 
       &__user-name {
         width: calc(260px - 60px);
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
       }
 
       &__menu {
         width: 60px;
         display: flex;
         justify-content: flex-end;
-        // color: #ffffff;
         
         &__new-group {
           text-decoration: none;
@@ -47,6 +48,30 @@
   .groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+
+    .group {
+      height: 100px;
+      padding-top: 20px;
+
+      &__group-name {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      &__latest-message {
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
   }
 }
 
