@@ -28,6 +28,18 @@
         width: 60px;
         display: flex;
         justify-content: flex-end;
+        // color: #ffffff;
+        
+        &__new-group {
+          text-decoration: none;
+          color: #ffffff;
+        }
+
+        &__edit-user {
+          text-decoration: none;
+          color: #ffffff;
+          margin-left: 5px;
+        }
       }
     }
   }
