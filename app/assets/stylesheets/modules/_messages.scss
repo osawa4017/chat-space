@@ -17,6 +17,17 @@
       width: 260px;
       background-color: #d8d8d8;
       margin: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      &__user-name {
+        width: calc(260px - 60px);
+      }
+
+      &__menu {
+        width: 60px;
+        background-color: #ff0000;
+      }
     }
   }
 
