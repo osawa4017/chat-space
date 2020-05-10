@@ -3,19 +3,38 @@
 
   .chat-side {
     background-color: #253141;
-    height: 100vh;
     width: 300px;
     float: left;
-    color: #ffffff;
-    text-align: center;
+
+    .side-header {
+      height: 100px;
+    }
+
+    .groups {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+    }
   }
 
   .chat-main {
     background-color: #ffffff;
-    height: 100vh;
     width: calc(100vw - 300px);
     float: right;
-    color: #ff0000;
-    text-align: center;
+
+    .main-header {
+      height: 100px;
+    }
+
+    .messages {
+      background-color: #fafafa;
+      border: 1px solid;
+      border-color: #eeeeee;
+      height: calc(100vh - 190px);
+    }
+
+    .form {
+      background-color: #d2d2d2;
+      height: 90px;
+    }
   }
 }
