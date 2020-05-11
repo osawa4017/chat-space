@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 .chat-side {
   background-color: #253141;
   width: 300px;
@@ -32,12 +36,10 @@
         justify-content: flex-end;
         
         &__new-group {
-          text-decoration: none;
           color: #ffffff;
         }
 
         &__edit-user {
-          text-decoration: none;
           color: #ffffff;
           margin-left: 5px;
         }
@@ -82,6 +84,41 @@
 
   .main-header {
     height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &__left-box {
+      height: 100%;
+      width: 100px;
+
+      &__current-group {
+        color: #333333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+
+      &__member-list {
+        color: #999999;
+        font-size: 12px;
+        margin-top: 15px;
+        display: flex;
+      }
+    }
+
+    &__edit-btn {
+      color: #38aef0;
+      font-size: 16px;
+      border: 1px solid;
+      height: 40px;
+      width: 72px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 28px;
+    }
   }
 
   .messages {
