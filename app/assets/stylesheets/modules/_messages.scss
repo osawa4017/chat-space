@@ -126,6 +126,31 @@ a {
     border: 1px solid;
     border-color: #eeeeee;
     height: calc(100vh - 190px);
+    padding-top: 35px;
+    padding-left: 40px;
+
+    .message {
+      &__upper-info {
+        display: flex;
+
+        &__talker {
+          color: #333333;
+          font-size: 16px;
+        }
+
+        &__date {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      
+      &__text {
+        color: #434A54;
+        font-size: 14px;
+        margin-top: 12px;
+        margin-bottom: 46px;
+      }
+    }
   }
 
   .form {
