@@ -1,3 +1,44 @@
+$chat-side-bgclr: #253141;
+$groups-bgclr: #2f3e51;
+$chat-main-bgclr: #ffffff;
+$messages-bgclr: #fafafa;
+$form-bgclr: #d2d2d2;
+$submit-btn-bgclr: #38aef0;
+
+$main-txtclr: #ffffff;
+$current-group-txtclr: #333333;
+$member-list-txtclr: #999999;
+$edit-btn-txtclr: #38aef0;
+$talker-txtclr: #333333;
+$date-txtclr: #999999;
+$message-txtclr: #434A54;
+
+@mixin text-setting($clr,$size) {
+  color: $clr;
+  font-size: $size;
+  font-weight: bold;
+}
+
+@mixin vertical-centering {
+  display: flex;
+  align-items: center;
+}
+
+@mixin equidistant {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin horizontal-centering {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin end-alignment {
+  display: flex;
+  justify-content: flex-end;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,175 +48,144 @@ a {
 }
 
 input::placeholder {
-  padding-left: 10px;
+  padding: 0 0 0 10px;
 }
 
 .chat-side {
-  background-color: #253141;
+  background-color: $chat-side-bgclr;
   width: 300px;
   float: left;
 
   .side-header {
     height: 100px;
-    display: flex;
-    align-items: center;
+    @include vertical-centering;
 
     &__box {
       height: 20px;
       width: 260px;
       margin: 40px 20px;
-      display: flex;
-      justify-content: space-between;
+      @include equidistant;
 
       &__user-name {
-        width: calc(260px - 60px);
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: bold;
+        width: 260px - 60px;
+        @include text-setting($main-txtclr,16px);
       }
 
       &__menu {
         width: 60px;
-        display: flex;
-        justify-content: flex-end;
+        @include end-alignment;
         
         &__new-group {
-          color: #ffffff;
+          @include text-setting($main-txtclr,16px);
         }
 
         &__edit-user {
-          color: #ffffff;
-          margin-left: 5px;
+          @include text-setting($main-txtclr,16px);
+          margin: 0 0 0 5px;
         }
       }
     }
   }
 
   .groups {
-    background-color: #2f3e51;
+    background-color: $groups-bgclr;
     height: calc(100vh - 100px);
 
     .group {
       height: 100px;
-      padding-top: 20px;
+      padding: 20px 0 0;
 
       &__group-name {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 5px;
-        color: #ffffff;
-        font-size: 15px;
-        font-weight: bold;
+        margin: 0 20px 5px;
+        @include text-setting($main-txtclr,15px);
       }
 
       &__latest-message {
-        margin-top: 5px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        color: #ffffff;
-        font-size: 11px;
-        font-weight: bold;
+        margin: 5px 20px 40px;
+        @include text-setting($main-txtclr,11px);
       }
     }
   }
 }
 
 .chat-main {
-  background-color: #ffffff;
+  background-color: $chat-main-bgclr;
   width: calc(100vw - 300px);
   float: right;
 
   .main-header {
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+    @include equidistant;
+    padding: 0 40px;
 
     &__left-box {
       width: 100px;
 
       &__current-group {
-        color: #333333;
-        font-size: 20px;
-        margin-top: 35px;
+        @include text-setting($current-group-txtclr,20px);
+        margin: 35px 0 0;
       }
 
       &__member-list {
-        color: #999999;
-        font-size: 12px;
-        margin-top: 15px;
+        @include text-setting($member-list-txtclr,12px);
+        margin: 15px 0 0;
         display: flex;
       }
     }
 
     &__edit-btn {
-      color: #38aef0;
-      font-size: 16px;
+      @include text-setting($edit-btn-txtclr,16px);
       border: 1px solid;
       height: 40px;
       width: 72px;
-      display: flex;
-      align-items: center;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-top: 28px;
+      @include vertical-centering;
+      padding: 0 20px;
+      margin: 28px 0 0;
     }
   }
 
   .messages {
-    background-color: #fafafa;
+    background-color: $messages-bgclr;
     border: 1px solid;
     border-color: #eeeeee;
     height: calc(100vh - 190px);
-    padding-top: 35px;
-    padding-left: 40px;
+    padding: 35px 0 0 40px;
 
     .message {
       &__upper-info {
         display: flex;
 
         &__talker {
-          color: #333333;
-          font-size: 16px;
+          @include text-setting($talker-txtclr,16px);
         }
 
         &__date {
-          color: #999999;
-          font-size: 12px;
+          @include text-setting($date-txtclr,12px);
         }
       }
       
       &__text {
-        color: #434A54;
-        font-size: 14px;
-        margin-top: 12px;
-        margin-bottom: 46px;
+        @include text-setting($message-txtclr,14px);
+        margin: 12px 0 46px;
       }
     }
   }
 
   .form {
-    background-color: #d2d2d2;
+    background-color: $form-bgclr;
     height: 90px;
-    display: flex;
-    align-items: center;
+    @include vertical-centering;
 
     .new_message {
-      display: flex;
-      justify-content: space-between;
+      @include equidistant;
       height: 50px;
       width: calc(100vw - 300px);
-      padding-left: 40px;
-      padding-right: 40px;
+      padding: 0 40px;
 
       .input-box {
-        background-color: #ffffff;
         width: calc(100vw - 235px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include vertical-centering;
+        @include equidistant;
         position: relative;
 
         &__text {
@@ -195,13 +205,12 @@ input::placeholder {
       }
 
       .submit-btn {
-        background-color: #38aef0;
+        background-color: $submit-btn-bgclr;
         width: 100px;
-        margin-left: 15px;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0 0 0 15px;
+        @include text-setting($main-txtclr,16px);
+        @include vertical-centering;
+        @include horizontal-centering;
       }
     }
   }
