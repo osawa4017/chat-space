@@ -57,3 +57,6 @@ gem "haml-rails"
 
 # for introduce FontAwesome
 gem 'font-awesome-sass'
+
+# for devise install
+gem 'devise'
