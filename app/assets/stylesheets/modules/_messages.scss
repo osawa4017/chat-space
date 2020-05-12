@@ -6,6 +6,10 @@ a {
   text-decoration: none;
 }
 
+input::placeholder {
+  padding-left: 10px;
+}
+
 .chat-side {
   background-color: #253141;
   width: 300px;
@@ -90,7 +94,6 @@ a {
     padding-right: 40px;
 
     &__left-box {
-      height: 100%;
       width: 100px;
 
       &__current-group {
@@ -156,5 +159,50 @@ a {
   .form {
     background-color: #d2d2d2;
     height: 90px;
+    display: flex;
+    align-items: center;
+
+    .new_message {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      width: calc(100vw - 300px);
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .input-box {
+        background-color: #ffffff;
+        width: calc(100vw - 235px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &__text {
+          height: 100%;
+          width: 100%;
+          border: none;
+        }
+
+        &__image {
+          position: absolute;
+          right: 10px;
+
+          &__file {
+            display: none;
+          }
+        }
+      }
+
+      .submit-btn {
+        background-color: #38aef0;
+        width: 100px;
+        margin-left: 15px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
