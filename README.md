@@ -5,7 +5,7 @@
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
 |mail|string|null: false|
-|pass|string|null: flase|
+|pass|string|null: false|
 
 ### Association
 - has_many :groups, through: members
