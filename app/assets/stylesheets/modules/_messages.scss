@@ -1,17 +1,19 @@
-$chat-side-bgclr: #253141;
-$groups-bgclr: #2f3e51;
-$chat-main-bgclr: #ffffff;
+$chat-side-bgclr: $side_blue_dark;
+$groups-bgclr: $side_blue_light;
+$chat-main-bgclr: $white;
 $messages-bgclr: #fafafa;
 $form-bgclr: #d2d2d2;
-$submit-btn-bgclr: #38aef0;
+$submit-btn-bgclr: $light_blue;
 
-$main-txtclr: #ffffff;
-$current-group-txtclr: #333333;
-$member-list-txtclr: #999999;
-$edit-btn-txtclr: #38aef0;
-$talker-txtclr: #333333;
-$date-txtclr: #999999;
-$message-txtclr: #434A54;
+$main-txtclr: $white;
+$current-group-txtclr: #333;
+$member-list-txtclr: $light_gray;
+$edit-btn-txtclr: $light_blue;
+$talker-txtclr: #333;
+$date-txtclr: $light_gray;
+$message-txtclr: $black;
+
+$messages-borclr: #eee; 
 
 @mixin text-setting($clr,$size) {
   color: $clr;
@@ -147,7 +149,7 @@ input::placeholder {
   .messages {
     background-color: $messages-bgclr;
     border: 1px solid;
-    border-color: #eeeeee;
+    border-color: $messages-borclr;
     height: calc(100vh - 190px);
     padding: 35px 0 0 40px;
 
