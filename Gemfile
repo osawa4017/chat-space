@@ -63,3 +63,9 @@ gem 'devise'
 
 # for pry debugging
 gem 'pry-rails'
+
+# for image transmission
+gem 'carrierwave', '~> 2.0'
+
+# for image processing
+gem 'mini_magick'
