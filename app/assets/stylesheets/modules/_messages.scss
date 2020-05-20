@@ -47,6 +47,7 @@ $messages-borclr: #eee;
 
 a {
   text-decoration: none;
+  color: $white;
 }
 
 input::placeholder {
@@ -121,7 +122,7 @@ input::placeholder {
     padding: 0 40px;
 
     &__left-box {
-      width: 100px;
+      width: 400px;
 
       &__current-group {
         @include text-setting($current-group-txtclr,20px);
@@ -132,6 +133,10 @@ input::placeholder {
         @include text-setting($member-list-txtclr,12px);
         margin: 15px 0 0;
         display: flex;
+
+        &__member {
+          margin: 0 0 0 5px;
+        }
       }
     }
 
