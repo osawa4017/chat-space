@@ -1,14 +1,15 @@
 .chat-main
   .main-header
     .main-header__left-box
-      .main-header__left-box__current-group
-        test
-      .main-header__left-box__member-list
+      %h2.main-header__left-box__current-group
+        = @group.name
+      %ul.main-header__left-box__member-list
         Member :
-        .main-header__left-box__member-list__member
-          masa
+        - @group.users.each do |user|
+          %li.main-header__left-box__member-list__member<
+            = user.name
     =link_to "#" do
-      .main-header__edit-btn
+      .main-header__edit-btn<
         Edit
   .messages
     = render @messages
