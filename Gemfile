@@ -71,4 +71,7 @@ gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 
 # for rspec test
-gem 'rspec-rails'
+gem 'rspec-rails', '~> 3.5'
+gem 'rails-controller-testing'
+gem 'factory_bot_rails'
+gem 'faker'
