@@ -69,3 +69,6 @@ gem 'carrierwave', '~> 2.0'
 
 # for image processing
 gem 'mini_magick'
+
+# for rspec test
+gem 'rspec-rails'
