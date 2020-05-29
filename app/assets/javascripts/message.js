@@ -1,7 +1,8 @@
 $(function(){
   function buildHTML(message){
+    let html;
     if (message.image) {
-      var html =
+      html =
       `
       <div class="message">
         <div class="message__upper-info">
@@ -14,7 +15,7 @@ $(function(){
       `
     }
     else {
-      var html =
+      html =
       `
       <div class="message">
         <div class="message__upper-info">
@@ -30,8 +31,8 @@ $(function(){
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    var formData = new FormData(this);
-    var url = $(this).attr('action');
+    let formData = new FormData(this);
+    let url = $(this).attr('action');
     $.ajax({
       url: url,
       type: 'POST',
@@ -41,7 +42,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data);
+      let html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('form')[0].reset();
