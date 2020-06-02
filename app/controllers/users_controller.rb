@@ -3,11 +3,7 @@ class UsersController < ApplicationController
     if (params[:keyword] == "")
       return nil
     end
-    user_array = []
-    Group.find(params[:group]).users.each do |user|
-      user_array.push(user.id)
-    end
-    @users = User.where('name LIKE?', "%#{params[:keyword]}%").where.not(id: user_array)
+    @users = User.where('name LIKE?', "%#{params[:keyword]}%").where.not(id: current_user.id)
     respond_to do |format|
       format.html
       format.json
