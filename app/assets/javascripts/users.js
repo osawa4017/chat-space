@@ -74,9 +74,11 @@ $(function() {
     $(this).parent().remove();
     addToMemberList(userName, userId);
     manageMemberInfo(userId);
+    incrementalSearch();
   });
 
   $(document).on('click', '.chat-group-user__btn--remove', function() {
     $(this).parent().remove();
+    incrementalSearch();
   });
 });
