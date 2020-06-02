@@ -30,7 +30,7 @@ $(function() {
     $(`#${id}`).append(html);
   }
 
-  $("#user-search-field").on("keyup", function() {
+  function incrementalSearch() {
     let input = $("#user-search-field").val();
     $.ajax( {
       type: 'GET',
@@ -62,6 +62,10 @@ $(function() {
     .fail(function() {
       alert("ユーザー検索に失敗しました");
     });
+  }
+
+  $("#user-search-field").on("keyup", function() {
+    incrementalSearch();
   });
 
   $(document).on('click', '.chat-group-user__btn--add', function() {
