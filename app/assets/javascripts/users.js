@@ -32,10 +32,11 @@ $(function() {
 
   function incrementalSearch() {
     let input = $("#user-search-field").val();
+    let group_id = $('.chat-group-form__input').data("group-id");
     $.ajax( {
       type: 'GET',
       url: '/users',
-      data: { keyword: input },
+      data: { keyword: input, group: group_id },
       dataType: 'json'
     })
     .done(function(users) {
@@ -74,11 +75,9 @@ $(function() {
     $(this).parent().remove();
     addToMemberList(userName, userId);
     manageMemberInfo(userId);
-    incrementalSearch();
   });
 
   $(document).on('click', '.chat-group-user__btn--remove', function() {
     $(this).parent().remove();
-    incrementalSearch();
   });
 });
