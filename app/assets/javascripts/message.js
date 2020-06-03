@@ -71,6 +71,9 @@ $(function(){
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
+      else {
+        ;
+      }
     })
     .fail(function() {
       alert('error');
@@ -80,4 +83,7 @@ $(function(){
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
   }  
+  else {
+    ;
+  }
 });
