@@ -187,11 +187,11 @@ input::placeholder {
     .new_message {
       @include equidistant;
       height: 50px;
-      width: calc(100vw - 300px);
-      padding: 0 40px;
+      width: calc(100vw - 380px);
+      margin: 0 auto;
 
       .input-box {
-        width: calc(100vw - 235px);
+        width: calc(100% - 115px);
         @include vertical-centering;
         @include equidistant;
         position: relative;
@@ -205,6 +205,7 @@ input::placeholder {
         &__image {
           position: absolute;
           right: 10px;
+          font-size: 24px;
 
           &__file {
             display: none;
