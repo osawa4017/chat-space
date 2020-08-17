@@ -5,25 +5,15 @@ ChatSpace
 チャットアプリケーションです。
 以下のような機能があります。
 - deviseを用いたsignup/login機能
-
 ![chatspace_signup](https://user-images.githubusercontent.com/64793100/90398236-0c2a2a80-e0d4-11ea-9930-6c94cf173af4.png)
-
 ![chatspace_signin](https://user-images.githubusercontent.com/64793100/90398300-27953580-e0d4-11ea-9003-7479efbe129f.png)
-
 - ユーザ編集機能
-
 ![chatspace_useredit](https://user-images.githubusercontent.com/64793100/90398922-1862b780-e0d5-11ea-84ba-3e9e8d99b10b.png)
-
 - グループ作成編集機能
-
 ![chatspace_creategroup](https://user-images.githubusercontent.com/64793100/90399176-8313f300-e0d5-11ea-8d88-fa5258b11ab0.png)
-
 ![chatspace_editgroup](https://user-images.githubusercontent.com/64793100/90399471-f3bb0f80-e0d5-11ea-9c3d-664ef5d375ad.png)
-
 - 複数人によるグループチャット機能(メッセージ投稿、画像投稿)
-
 ![chatspace_post](https://user-images.githubusercontent.com/64793100/90399722-61673b80-e0d6-11ea-8047-d03c4fd5d6cf.png)
-
 - チャット相手の検索機能
 - チャットグループへのユーザ招待機能
 - 非同期通信によるチャットの自動更新機能
@@ -58,7 +48,6 @@ http://54.199.0.61/
 # データベース設計
 
 ## ER図
-
 ![01_erd_chatspace](https://user-images.githubusercontent.com/64793100/90401936-a6d93800-e0d9-11ea-98c1-684c54fae8b1.png)
 
 ## usersテーブル
