@@ -39,17 +39,6 @@ $(function() {
     $(`#${id}`).append(html);
   }
 
-  function addToResult(name, id) {
-    let html =
-        `
-        <div class="chat-group-user clearfix">
-          <p class="chat-group-user__name">${name}</p>
-          <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${id}" data-user-name="${name}">追加</div>
-        </div>
-        `;
-    $("#user-search-result").append(html);
-  }
-
   function incrementalSearch() {
     let input = $("#user-search-field").val();
     const member_id = $('.chat-group-user__btn--remove').attr("data-user-id");
@@ -108,6 +97,6 @@ $(function() {
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
-    addToResult(userName, userId);
+    incrementalSearch();
   });
 });
