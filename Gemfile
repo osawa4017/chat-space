@@ -72,7 +72,7 @@ gem 'devise'
 gem 'pry-rails'
 
 # for image transmission
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 # for image processing
 gem 'mini_magick'
